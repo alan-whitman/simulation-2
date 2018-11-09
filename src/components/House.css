@@ -1,0 +1,33 @@
+.House {
+    background-color: #AFD4C0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+.delete-house-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #DEDEDE;
+}
+.house-image {
+    display: flex;
+    align-items: center;
+}
+.house-image img {
+    max-width: 200px;
+}
+.House p {
+    margin-left: 30px;
+}
