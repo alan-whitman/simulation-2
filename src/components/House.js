@@ -11,6 +11,8 @@ const House = (props) => {
             City: {props.house.city}<br />
             State: {props.house.state}<br />
             Zip: {props.house.zip}</p>
+            <p>Mongthly Mortgage: ${props.house.mortgage}<br />
+            Desired Rent: ${props.house.rent}</p>
         </div>
     )
 }

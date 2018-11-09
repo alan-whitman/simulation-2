@@ -11,16 +11,14 @@ class WizardThree extends Component {
     }
     addHouse() {
         let {name, address, city, state, zip, img, mortgage, rent} = this.props;
-        console.log({name, address, city, state, zip, img, mortgage, rent});
         zip = Number(zip);
         mortgage = Number(mortgage);
         rent = Number(rent);
         axios.post('/api/houses', {name, address, city, state, zip, img, mortgage, rent}).then(res => {
-            // this.setState({})
+            this.props.cancelAddNew();
+            this.props.getHouses();
+            this.props.history.push('/');
         }).catch(err => console.error(err));
-        this.props.cancelAddNew();
-        this.props.getHouses();
-        this.props.history.push('/');
     }
     render() {
         return(
