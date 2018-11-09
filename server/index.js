@@ -5,7 +5,7 @@ const hc = require('./controllers/house_controller');
 require('dotenv').config();
 const app = express();
 
-const { CONNECTION_STRING: cs, SERVER_PORT: port, SESSION_SECRET: ss } = process.env;
+const { CONNECTION_STRING: cs, SERVER_PORT: port } = process.env;
 
 app.use(bodyParser.json());
 app.use(express.static('build'));
