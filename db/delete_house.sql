@@ -1,3 +1,3 @@
 DELETE FROM Houses
 WHERE id = $1;
-SELECT * FROM Houses;
+SELECT * FROM houses ORDER BY id DESC;

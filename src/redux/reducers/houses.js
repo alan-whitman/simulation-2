@@ -5,9 +5,11 @@ const initialState = {
     state: '',
     zip: '',
     img: '',
-    mortgage: '',
-    rent: '',
+    mortgage: '0',
+    rent: '0',
+    recommendedRent: 0
 }
+
 const UPDATE_NAME = 'UPDATE_NAME';
 const UPDATE_ADDRESS = 'UPDATE_ADDRESS';
 const UPDATE_CITY = 'UPDATE_CITY';
@@ -33,11 +35,11 @@ const reducer = (state = initialState, action) => {
         case UPDATE_IMG:
             return {...state, img: action.payload};
         case UPDATE_MORTGAGE:
-            return {...state, mortgage: action.payload};
+            return {...state, mortgage: action.payload, recommendedRent: Number(action.payload) * 1.25};
         case UPDATE_RENT:
             return {...state, rent: action.payload};
         case CANCEL_ADD_NEW:
-            return {initialState};
+            return initialState;
         default:
             return state;
     }
@@ -105,7 +107,7 @@ const cancelAddNew = () => {
     }
 }
 
-export {updateName, updateAddress, updateCity, updateState,updateZip, updateImg, updateMortgage, updateRent, cancelAddNew};
+export {updateName, updateAddress, updateCity, updateState, updateZip, updateImg, updateMortgage, updateRent, cancelAddNew};
 
 export default reducer;
 

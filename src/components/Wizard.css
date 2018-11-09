@@ -29,8 +29,22 @@
     text-decoration: none;
     color: black;
 }
+.wizard-form {
+    padding-bottom: 10px;
+}
 .Wizard hr {
     height: 3px;
     border: none;
     background-color: #DEDEDE;
+}
+.wizard-image {
+    max-width: 500px;
+}
+.WizardTwo input {
+    width: 500px;
+}
+.WizardTwo {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
